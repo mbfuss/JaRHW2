@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор</title>
+    <script src="./main.js"></script>
+</head>
+
+<body>
+    <h3>Примитивный калькулятор</h3>
+        <!-- 1-я строка ввода числа -->
+        <input id = "num1"> 
+
+    <!-- div - новый блок, следующая строка -->
+    <div>
+        <!-- кнопки операций -->
+        <!-- Событие onclick возникает при щелчке левой кнопкой мыши на элементе, к которому добавлен атрибут onclick. Синтаксис onclick="скрипт" -->
+        <button id="plus" onclick="op='+'" >+</button>
+        <button id="minus" onclick="op='-'">-</button>
+        <button id="multiply" onclick="op='*'">*</button>
+        <button id="share" onclick="op='/'">/</button>
+    </div>
+
+        <!-- 2-я строка ввода числа -->
+        <input id = "num2"> 
+        
+    <div>
+	    <!-- кнопка для рассчёта, вызываем ф-ю calculate(), когда жмем результат -->
+        <button onclick="calculate(),history()">Результат</button>
+        <h3 id="result"></h3>
+    </div>
+
+    <hr>
+    <h3>История действий</h3>
+    <div id="history"></div>
+</body>
+</html>
