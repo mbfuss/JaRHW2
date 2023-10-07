@@ -8,26 +8,41 @@
 </head>
 
 <body>
+    <body bgcolor="gray">
     <h3>Примитивный калькулятор</h3>
-        <!-- 1-я строка ввода числа -->
-        <input id = "num1"> 
-
-    <!-- div - новый блок, следующая строка -->
+    
     <div>
-        <!-- кнопки операций -->
+        <!-- ввод первого числа -->
+        <input id = "num1" onfocus="setActiveInput(1)"> 
         <!-- Событие onclick возникает при щелчке левой кнопкой мыши на элементе, к которому добавлен атрибут onclick. Синтаксис onclick="скрипт" -->
-        <button id="plus" onclick="op='+'" >+</button>
-        <button id="minus" onclick="op='-'">-</button>
-        <button id="multiply" onclick="op='*'">*</button>
-        <button id="share" onclick="op='/'">/</button>
+        <button onclick="op='+'" >+</button>
+        <button onclick="op='-'">-</button>
+        <button onclick="op='*'">*</button>
+        <button onclick="op='/'">/</button>
+
+        <!-- ввод второго числа -->
+        <input id = "num2" onfocus="setActiveInput(2)"> 
+    </div>
+    <div>
+        <button onclick="appendToActiveInput('1')">1</button> 
+        <button onclick="appendToActiveInput('2')">2</button> 
+        <button onclick="appendToActiveInput('3')">3</button>
+    </div>
+    <div>
+        <button onclick="appendToActiveInput('4')">4</button> 
+        <button onclick="appendToActiveInput('5')">5</button> 
+        <button onclick="appendToActiveInput('6')">6</button>
+    </div>
+    <div>
+        <button onclick="appendToActiveInput('7')">7</button> 
+        <button onclick="appendToActiveInput('8')">8</button> 
+        <button onclick="appendToActiveInput('9')">9</button>
     </div>
 
-        <!-- 2-я строка ввода числа -->
-        <input id = "num2"> 
-        
     <div>
-	    <!-- кнопка для рассчёта, вызываем ф-ю calculate(), когда жмем результат -->
-        <button onclick="calculate(),history()">Результат</button>
+	    <!-- Кнопка для рассчёта, вызываем ф-ю calculate(), history() когда жмем результат -->
+        <button onclick="calculate(),history()">=</button>
+        <button onclick="clearInput()">C</button>
         <h3 id="result"></h3>
     </div>
 
@@ -36,3 +51,5 @@
     <div id="history"></div>
 </body>
 </html>
+
+
