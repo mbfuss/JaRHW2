@@ -1,13 +1,5 @@
 // Переменная для хранения мат. действия
 var op;
-var op;
-var op;
-var op;
-var op;
-var op;
-
-
-var op;
 var oneObj = {};
 // Функция рассчета
 function calculate() {
